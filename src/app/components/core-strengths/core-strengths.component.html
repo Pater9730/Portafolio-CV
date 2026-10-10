@@ -1,0 +1,12 @@
+<section id="strengths">
+  <h2 fadeOnScroll>Mis <span class="grad">capacidades</span></h2>
+  <div class="grid">
+    @for (c of cv.strengths; track c.title) {
+      <div fadeOnScroll class="card cp">
+        <div class="ib">{{ c.icon }}</div>
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.text }}</p>
+      </div>
+    }
+  </div>
+</section>

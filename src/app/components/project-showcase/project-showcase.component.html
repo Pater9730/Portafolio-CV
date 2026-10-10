@@ -1,0 +1,14 @@
+<section id="projects">
+  <h2 fadeOnScroll>Proyectos <span class="grad">destacados</span></h2>
+  <div class="grid">
+    @for (p of cv.projects; track p.title) {
+      <a fadeOnScroll class="card" [href]="p.url" target="_blank">
+        <div class="bar"></div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.text }}</p>
+        @for (t of p.tags; track t) { <span class="chip">{{ t }}</span> }
+        <div class="go">Ver repositorio →</div>
+      </a>
+    }
+  </div>
+</section>

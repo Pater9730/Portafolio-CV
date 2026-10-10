@@ -1,0 +1,11 @@
+<section id="stack">
+  <h2 fadeOnScroll>Lenguajes y <span class="grad">tecnologías</span></h2>
+  <div class="grid">
+    @for (g of cv.skills; track g.title) {
+      <div fadeOnScroll class="card">
+        <h3><span class="ic">{{ g.icon }}</span> {{ g.title }}</h3>
+        @for (s of g.items; track s) { <span class="chip">{{ s }}</span> }
+      </div>
+    }
+  </div>
+</section>

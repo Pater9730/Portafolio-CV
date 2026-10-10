@@ -1,0 +1,39 @@
+.line {
+  border-left: 2px solid #e1060066;
+  margin-left: 10px;
+  padding-left: 34px;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.dot {
+  position: absolute;
+  left: -44px;
+  top: 28px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,var(--a),var(--b));
+  box-shadow: 0 0 18px var(--a);
+}
+
+small {
+  color: var(--b);
+}
+
+h4 {
+  font-size: 1.05rem;
+  margin: 2px 0 12px;
+}
+
+ul {
+  padding-left: 18px;
+  color: var(--mut);
+}
+
+li {
+  margin-bottom: 6px;
+}

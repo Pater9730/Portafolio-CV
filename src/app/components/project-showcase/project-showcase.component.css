@@ -1,0 +1,23 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.bar {
+  height: 5px;
+  border-radius: 9px;
+  background: linear-gradient(90deg,var(--a),var(--b),var(--c));
+  margin-bottom: 16px;
+}
+
+p {
+  color: var(--mut);
+  margin: 8px 0 14px;
+}
+
+.go {
+  margin-top: 14px;
+  color: var(--b);
+  font-weight: 600;
+}

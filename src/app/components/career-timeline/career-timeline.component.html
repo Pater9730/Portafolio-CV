@@ -1,0 +1,16 @@
+<section id="career">
+  <h2 fadeOnScroll>Experiencia <span class="grad">laboral</span></h2>
+  <div class="line">
+    @for (e of cv.experience; track e.company) {
+      <div fadeOnScroll class="item">
+        <span class="dot"></span>
+        <div class="card">
+          <small>{{ e.dates }}</small>
+          <h3>{{ e.role }}</h3>
+          <h4 class="grad">{{ e.company }}</h4>
+          <ul>@for (p of e.highlights; track p) { <li>{{ p }}</li> }</ul>
+        </div>
+      </div>
+    }
+  </div>
+</section>

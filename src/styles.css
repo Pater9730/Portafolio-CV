@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root{--bg:#070707;--card:#121212;--txt:#f2f2f2;--mut:#a3a3a3;--bd:#ffffff14;--a:#e10600;--b:#ff3b30;--c:#ff7a45}
+:root[data-theme=light]{--bg:#fafafa;--card:#ffffff;--txt:#161616;--mut:#555555;--bd:#00000018}
+html{background:var(--bg)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+section{max-width:1100px;margin:auto;padding:90px 24px}
+h2{font-size:2.2rem;margin-bottom:36px}
+.grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:24px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--a);box-shadow:0 12px 40px #e1060033}
+.chip{display:inline-block;padding:6px 14px;margin:4px;border-radius:99px;background:#e1060022;border:1px solid #e1060066;font-size:.85rem;transition:.2s}
+.chip:hover{background:var(--a);transform:scale(1.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.btn{display:inline-block;padding:13px 28px;border-radius:99px;color:#fff;text-decoration:none;font-weight:600;background:linear-gradient(90deg,var(--a),var(--b));transition:.3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #ff3b3044}
+.btn.ghost{background:none;border:1px solid var(--a);color:var(--txt)}
+.fade-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.fade-on-scroll.in-view{opacity:1;transform:none}
+
+.fm{margin-top:28px}.fm input,.fm textarea{width:100%;margin:6px 0 4px;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:transparent;color:var(--txt);font:inherit}
+.fm input:focus,.fm textarea:focus{outline:none;border-color:var(--a)}.fm .btn{border:0;cursor:pointer;margin-top:12px;font:inherit;font-weight:600}.err{color:var(--b);font-size:.8rem;display:block}.ok{color:var(--b);margin-top:10px}
+.theme{margin-left:16px;background:none;border:1px solid var(--bd);border-radius:99px;width:36px;height:36px;cursor:pointer;font-size:1rem;color:var(--txt)}

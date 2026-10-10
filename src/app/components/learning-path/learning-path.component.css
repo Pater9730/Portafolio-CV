@@ -1,0 +1,19 @@
+span {
+  font-size: 1.8rem;
+}
+
+p {
+  color: var(--mut);
+}
+
+small {
+  color: var(--b);
+}
+
+.cursos {
+  margin-top: 28px;
+}
+
+.chip {
+  font-size: .9rem;
+}

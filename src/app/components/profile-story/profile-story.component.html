@@ -1,0 +1,27 @@
+<section id="about">
+  <h2 fadeOnScroll>Sobre <span class="grad">mí</span></h2>
+  <div class="abt">
+    <aside fadeOnScroll class="card me">
+      <img class="ring" src="foto.jpg" alt="Foto de Arnovil Paternina">
+      <h3>{{ cv.name }}</h3>
+      <p class="rl">Desarrollador Full Stack .NET</p>
+      <p class="lc">📍 {{ cv.city }}</p>
+      <span class="avail"><i></i>Disponible para trabajo remoto o reubicación</span>
+    </aside>
+    <div fadeOnScroll class="abx">
+      <p class="lead2">Construyo aplicaciones web completas, de la base de datos a la interfaz, con C#, ASP.NET Core, Angular y SQL Server.</p>
+      <p>Me enfoco en APIs REST seguras, arquitectura en capas y principios SOLID, cuidando siempre la seguridad, el rendimiento y la mantenibilidad. Me gusta integrar servicios externos y llevar cada solución desde el diseño hasta producción.</p>
+      <p>Mi experiencia más reciente está en el backend de una plataforma empresarial: diseñé de extremo a extremo el módulo de Comunicaciones para una red nacional de puntos de venta, con segmentación jerárquica, notificaciones push y eventos en tiempo real con SignalR. También di soporte de producción, resolví incidencias e integré servicios de SAP.</p>
+      <div class="highlights">
+        @for (d of highlights; track d[1]) {
+          <div class="card"><span class="e">{{ d[0] }}</span><b>{{ d[1] }}</b><span>{{ d[2] }}</span></div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    @for (s of cv.stats; track s.label) {
+      <div fadeOnScroll class="card stat"><strong class="grad">{{ s.value }}</strong><span>{{ s.label }}</span></div>
+    }
+  </div>
+</section>

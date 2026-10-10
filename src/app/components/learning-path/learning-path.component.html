@@ -1,0 +1,11 @@
+<section id="learning">
+  <h2 fadeOnScroll>Educación y <span class="grad">cursos</span></h2>
+  <div class="grid">
+    @for (e of cv.education; track e.degree) {
+      <div fadeOnScroll class="card"><span>🎓</span><h3>{{ e.degree }}</h3><p>{{ e.school }}</p><small>{{ e.period }}</small></div>
+    }
+  </div>
+  <div fadeOnScroll class="cursos">
+    @for (c of cv.courses; track c) { <span class="chip">📚 {{ c }}</span> }
+  </div>
+</section>
