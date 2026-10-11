@@ -18,6 +18,4 @@ h2{font-size:2.2rem;margin-bottom:36px}
 .fade-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
 .fade-on-scroll.in-view{opacity:1;transform:none}
 
-.fm{margin-top:28px}.fm input,.fm textarea{width:100%;margin:6px 0 4px;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:transparent;color:var(--txt);font:inherit}
-.fm input:focus,.fm textarea:focus{outline:none;border-color:var(--a)}.fm .btn{border:0;cursor:pointer;margin-top:12px;font:inherit;font-weight:600}.err{color:var(--b);font-size:.8rem;display:block}.ok{color:var(--b);margin-top:10px}
 .theme{margin-left:16px;background:none;border:1px solid var(--bd);border-radius:99px;width:36px;height:36px;cursor:pointer;font-size:1rem;color:var(--txt)}

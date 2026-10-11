@@ -6,15 +6,4 @@
     <a fadeOnScroll class="card" [href]="cv.github" target="_blank">🐙 <b>GitHub</b><br>Pater9730</a>
     <a fadeOnScroll class="card" [href]="cv.linkedin" target="_blank">💼 <b>LinkedIn</b><br>arnovil-paternina</a>
   </div>
-  <form fadeOnScroll class="card fm" [formGroup]="form" (ngSubmit)="send()">
-    <h3>✍️ Envíame un mensaje</h3>
-    <input formControlName="name" placeholder="Tu nombre">
-    @if (hasError('name')) { <small class="err">Escribe tu nombre</small> }
-    <input formControlName="email" type="email" placeholder="Tu correo">
-    @if (hasError('email')) { <small class="err">Correo no válido</small> }
-    <textarea formControlName="message" rows="4" placeholder="Tu mensaje"></textarea>
-    @if (hasError('message')) { <small class="err">Mínimo 10 caracteres</small> }
-    <button class="btn" type="submit">Enviar mensaje</button>
-    @if (sent) { <p class="ok">Copié mi correo. Si no se abrió tu app de correo, pégalo y envíame tu mensaje.</p> }
-  </form>
 </section>
