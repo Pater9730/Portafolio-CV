@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'ap-top-bar',
@@ -7,9 +7,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrl: './top-bar.component.css',
 })
 export class TopBarComponent implements OnInit {
-  scrolled = false;
-  progress = 0;
-  dark = true;
+  scrolled = signal(false);
+  progress = signal(0);
+  dark = signal(true);
 
   links = [
     ['about', 'Sobre mí'],
@@ -23,27 +23,27 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit() {
     try {
-      this.dark = localStorage.getItem('theme') !== 'light';
+      this.dark.set(localStorage.getItem('theme') !== 'light');
     } catch {}
     this.apply();
   }
 
   toggle() {
-    this.dark = !this.dark;
+    this.dark.update((value) => !value);
     this.apply();
     try {
-      localStorage.setItem('theme', this.dark ? 'dark' : 'light');
+      localStorage.setItem('theme', this.dark() ? 'dark' : 'light');
     } catch {}
   }
 
   private apply() {
-    document.documentElement.setAttribute('data-theme', this.dark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', this.dark() ? 'dark' : 'light');
   }
 
   @HostListener('window:scroll')
   onScroll() {
     const h = document.documentElement;
-    this.scrolled = h.scrollTop > 60;
-    this.progress = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    this.scrolled.set(h.scrollTop > 60);
+    this.progress.set((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100);
   }
 }

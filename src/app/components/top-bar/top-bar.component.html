@@ -1,8 +1,8 @@
-<nav [class.solid]="scrolled">
+<nav [class.solid]="scrolled()">
   <b class="grad">AP</b>
   <div>
     @for (l of links; track l[0]) { <a [href]="'#' + l[0]">{{ l[1] }}</a> }
-    <button class="theme" (click)="toggle()" aria-label="Cambiar tema">{{ dark ? '☀️' : '🌙' }}</button>
+    <button class="theme" (click)="toggle()" aria-label="Cambiar tema">{{ dark() ? '☀️' : '🌙' }}</button>
   </div>
 </nav>
-<div class="progress" [style.width.%]="progress"></div>
+<div class="progress" [style.width.%]="progress()"></div>

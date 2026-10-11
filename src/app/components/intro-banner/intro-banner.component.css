@@ -44,10 +44,6 @@ header {
   z-index: 1;
 }
 
-.pillbox {
-  margin-bottom: 22px;
-}
-
 .avail {
   display: inline-flex;
   align-items: center;
@@ -149,17 +145,6 @@ h3 {
 h3.out {
   opacity: 0;
   transform: translateY(8px);
-}
-
-.cur {
-  color: var(--b);
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
 }
 
 .loc {

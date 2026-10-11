@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { CV } from '../../data/cv.data';
 import { copyMail } from '../../utils/mail';
 
@@ -10,8 +10,8 @@ import { copyMail } from '../../utils/mail';
 })
 export class IntroBannerComponent implements OnInit, OnDestroy {
   cv = CV;
-  i = 0;
-  out = false;
+  roleIndex = signal(0);
+  fading = signal(false);
   private timer?: any;
 
   mail(e: Event) {
@@ -21,13 +21,14 @@ export class IntroBannerComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.timer = setInterval(() => {
-      this.out = true;
+      this.fading.set(true);
       setTimeout(() => {
-        this.i = (this.i + 1) % this.cv.roles.length;
-        this.out = false;
+        this.roleIndex.update((i) => (i + 1) % this.cv.roles.length);
+        this.fading.set(false);
       }, 400);
     }, 2800);
   }
+
   ngOnDestroy() {
     clearInterval(this.timer);
   }
