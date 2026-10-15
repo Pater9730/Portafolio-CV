@@ -9,7 +9,7 @@ import { Component, HostListener, OnInit, signal } from '@angular/core';
 export class TopBarComponent implements OnInit {
   scrolled = signal(false);
   progress = signal(0);
-  dark = signal(true);
+  dark = signal(false);
 
   links = [
     ['about', 'Sobre mí'],
@@ -23,7 +23,7 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit() {
     try {
-      this.dark.set(localStorage.getItem('theme') !== 'light');
+      this.dark.set(localStorage.getItem('theme') === 'dark');
     } catch {}
     this.apply();
   }
