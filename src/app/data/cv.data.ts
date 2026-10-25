@@ -1,7 +1,7 @@
 export const CV = {
   name: 'Arnovil Paternina',
   roles: ['Desarrollador Full Stack .NET', 'Backend con ASP.NET Core', 'Angular + TypeScript', 'APIs REST seguras'],
-  city:  'Bogotá, Colombia',
+  city: 'Bogotá, Colombia',
   email: 'juniorpaternina8@gmail.com',
   phone: '320 574 3924',
   github: 'https://github.com/Pater9730',
@@ -11,7 +11,6 @@ export const CV = {
     { value: '2+', label: 'años de experiencia' },
     { value: '2', label: 'empresas' },
     { value: '3', label: 'proyectos en GitHub' },
-    { value: '100%', label: 'remoto / reubicable' },
   ],
   skills: [
     { icon: '💻', title: 'Lenguajes', items: ['C#', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3'] },
@@ -30,12 +29,11 @@ export const CV = {
       company: 'Comercial Allan S.A.S.', role: 'Desarrollador Back-End', dates: 'Feb 2026 – Jul 2026',
       highlights: [
         'Diseñé y desarrollé de extremo a extremo el backend del módulo de Comunicaciones, canal oficial de Popsy hacia toda su red nacional de puntos de venta.',
-        'Automaticé la activación y expiración de contenido mediante hosted services, e integré notificaciones push (firebase) e in-app con eventos en tiempo real via SignalR para garantizar entrega y visibilidad inmediata.',
         'Segmentación jerárquica dinámica (país → región → distrito → punto de venta → rol → área → marca).',
-        'Construí funcionalidades de interacción dentro del módulo de Comunicaciones, incluyendo banners con ordenamiento tipo carrusel, reacciones y comentarios con hilos.',
-        'Construí endpoints de agregación jerárquica de horas trabajadas y nuevo rol (Gerente Regional) en la cadena de aprobación.',
+        'Banners tipo carrusel, reacciones y comentarios con hilos.',
+        'Activación/expiración automática con hosted services; push (Firebase) e in-app en tiempo real con SignalR.',
+        'Endpoints de agregación jerárquica de horas trabajadas y nuevo rol (Gerente Regional) en la cadena de aprobación.',
         'Integración de servicios externos (CDS de SAP), soporte de producción y resolución de incidencias.',
-        'Implementación de soluciones siguiendo arquitectura en capas y principios SOLID para garantizar mantenibilidad y desacoplamiento del sistema.',
       ],
     },
     {
@@ -44,8 +42,6 @@ export const CV = {
         'Aplicaciones web con ASP.NET Core y Angular integradas por APIs REST.',
         'Backend con EF Core, SQL Server y JWT: validaciones, manejo global de excepciones y autenticación segura.',
         'Refactorización y despliegue en Azure App Service con Azure SQL Database.',
-        'Implementación de arquitectura por capas y principios SOLID para mejorar la organización, mantenibilidad y escalabilidad del código.',
-        'Desarrollo y documentación de endpoints REST con Swagger y pruebas de APIs mediante Postman para validar funcionalidades e integración entre servicios.',
       ],
     },
   ],

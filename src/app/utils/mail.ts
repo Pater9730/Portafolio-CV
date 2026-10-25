@@ -1,4 +1,4 @@
-// Copies the email to the clipboard and shows a short notice (works in any browser, no popups)
+// Copies text to the clipboard and shows a short notice (works in any browser, no popups)
 export function toast(msg: string) {
   const t = document.createElement('div');
   t.textContent = msg;
@@ -7,13 +7,22 @@ export function toast(msg: string) {
   setTimeout(() => t.remove(), 3200);
 }
 
-export async function copyMail(email: string) {
-  try { await navigator.clipboard.writeText(email); }
-  catch {
+export async function copyText(text: string, notice: string) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
     const x = document.createElement('textarea');
-    x.value = email; document.body.appendChild(x); x.select();
-    try { document.execCommand('copy'); } catch {}
+    x.value = text;
+    document.body.appendChild(x);
+    x.select();
+    try {
+      document.execCommand('copy');
+    } catch {}
     x.remove();
   }
-  toast('Correo copiado: ' + email);
+  toast(notice);
+}
+
+export function copyMail(email: string) {
+  return copyText(email, 'Correo copiado: ' + email);
 }
