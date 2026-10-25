@@ -1,7 +1,7 @@
 export const CV = {
   name: 'Arnovil Paternina',
   roles: ['Desarrollador Full Stack .NET', 'Backend con ASP.NET Core', 'Angular + TypeScript', 'APIs REST seguras'],
-  city: 'Santa Marta, Colombia',
+  city:  'Bogotá, Colombia',
   email: 'juniorpaternina8@gmail.com',
   phone: '320 574 3924',
   github: 'https://github.com/Pater9730',
