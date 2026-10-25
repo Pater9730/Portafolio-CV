@@ -29,19 +29,23 @@ export const CV = {
       company: 'Comercial Allan S.A.S.', role: 'Desarrollador Back-End', dates: 'Feb 2026 – Jul 2026',
       highlights: [
         'Diseñé y desarrollé de extremo a extremo el backend del módulo de Comunicaciones, canal oficial de Popsy hacia toda su red nacional de puntos de venta.',
-        'Segmentación jerárquica dinámica (país → región → distrito → punto de venta → rol → área → marca).',
-        'Banners tipo carrusel, reacciones y comentarios con hilos.',
-        'Activación/expiración automática con hosted services; push (Firebase) e in-app en tiempo real con SignalR.',
-        'Endpoints de agregación jerárquica de horas trabajadas y nuevo rol (Gerente Regional) en la cadena de aprobación.',
-        'Integración de servicios externos (CDS de SAP), soporte de producción y resolución de incidencias.',
+        'Implementé segmentación jerárquica dinámica (país  región  distrito  punto de venta  rol  área  marca), permitiendo dirigir un mismocontenido desde un único punto de venta hasta la totalidad de la compañía',
+        'Construí funcionalidades de interacción dentro del módulo de Comunicaciones, incluyendo banners con ordenamiento tipo carrusel, reacciones y comentarios con hilos.',
+        'Automaticé la activación y expiración de contenido mediante hosted services, e integré notificaciones push (firebase) e in-app con eventos entiempo real via SignalR para garantizar entrega y visibilidad inmediata.',
+        'Desarrollé endpoints de agregación jerárquica de horas trabajadas (Región  Distrito  Punto de venta) e incorporé un nuevo rol organizacional(Gerente Regional) a la cadena de aprobación existente',
+        'Implementación de soluciones siguiendo arquitectura en capas y principios SOLID para garantizar mantenibilidad y desacoplamiento del sistema.',
+        'Integración de servicios externos (CDS provenientes de SAP) dentro de distintos flujos de la aplicación para procesamiento y sincronización de datos.',
+        'Análisis y resolución de incidencias en diferentes módulos de la aplicación, identificando causas raíz y aplicando soluciones.'
       ],
     },
     {
       company: 'Soft Simulation S.A.S', role: 'Desarrollador Junior .NET', dates: 'Ene 2024 – Dic 2025',
       highlights: [
-        'Aplicaciones web con ASP.NET Core y Angular integradas por APIs REST.',
-        'Backend con EF Core, SQL Server y JWT: validaciones, manejo global de excepciones y autenticación segura.',
-        'Refactorización y despliegue en Azure App Service con Azure SQL Database.',
+        'Desarrollé aplicaciones web utilizando ASP.NET Core y Angular, integrando frontend y backend mediante APIs REST y aplicando separación de responsabilidades',
+        'Implementé funcionalidades backend con Entity Framework Core, SQL Server y JWT, incluyendo validaciones, manejo global de excepciones y autenticación segura.',
+        'Participé en el desarrollo, refactorización y despliegue de soluciones web en Azure App Service, mejorando la mantenibilidad de módulosexistentes y gestionando configuraciones de entorno y conexión con Azure SQL Database.',
+        'Implementación de arquitectura por capas y principios SOLID para mejorar la organización, mantenibilidad y escalabilidad del código.',
+        'Desarrollo y documentación de endpoints REST con Swagger y pruebas de APIs mediante Postman para validar funcionalidades e integración entre servicios.'
       ],
     },
   ],
